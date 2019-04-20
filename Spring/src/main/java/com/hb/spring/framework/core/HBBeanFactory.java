@@ -15,4 +15,12 @@ public interface HBBeanFactory {
      * @throws Exception
      */
     Object getBean(String beanName) throws Exception;
+
+    /**
+     * 根据类获取bean
+     * @param beanClass
+     * @return
+     * @throws Exception
+     */
+    public Object getBean(Class<?> beanClass) throws Exception;
 }

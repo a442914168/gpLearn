@@ -8,5 +8,22 @@ package com.hb.spring.framework.beans;
  **/
 public class HBBeanWrapper {
 
+    private Object wrappedInstance;
+    private Class<?> wrappedClass;
 
+    public HBBeanWrapper(Object wrappedInstance) {
+        this.wrappedInstance = wrappedInstance;
+    }
+
+    public Object getWrappedInstance() {
+        return wrappedInstance;
+    }
+
+    /**
+     * 返回代理以后的Class
+     * @return 可能会是个 $Proxy0
+     */
+    public Class<?> getWrappedClass() {
+        return wrappedClass;
+    }
 }
