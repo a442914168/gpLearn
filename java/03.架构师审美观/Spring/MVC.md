@@ -71,7 +71,7 @@
          4. `initHandlerMappings`路径映射
             1. 循环`ApplicationContext`上下文获取到的`beanDefinitionNames`，将存在`Controller`注解的类，获取对应的`RequestMapping`的值`baseUrl`
             2. 循环该类的方法，将存在`RequestMapping`注解的方法，获取对应的值。
-            3. 没获取到一个方法的url值，就组装成一个`HandlerMapping` 将其存入`handleMappings`中
+            3. 每获取到一个方法的url值，就组装成一个`HandlerMapping` 将其存入`handleMappings`中
          5. `initHandlerAdapters` 参数适配器
             1. 每一个`HandlerMapping`都应该有对应的参数适配器，所以进行循环遍历
             2. new 一个 `HandlerAdapter` 和 `HandlerMapping`储存在`handlerAdapters`中
